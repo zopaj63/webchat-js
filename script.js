@@ -57,6 +57,20 @@ const DOM = {
     form: document.querySelector('.message-form'),
 };
 
+DOM.form.addEventListener('submit', sendMessage);
+
+function sendMessage() {
+    const value = DOM.input.value;
+    if (value === '') {
+        return;
+    }
+    DOM.input.value = '';
+    drone.publish({
+        room: 'observable-room',
+        message: value,
+    });
+}
+
 function createMemberElement(member) {
     const { name, color } = member.clientData;
     const el = document.createElement('div');
