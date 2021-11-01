@@ -11,14 +11,19 @@
 </head>
 
 <body>
+    <div>Enter your name:</div>
+    <form class="js-member-name">
+        <input class="js-member-name__input" placeholder="Type your name.." type="text" />
+        <input class="js-member-name__button" value="Get to chat room" type="button" />
+    </form>
     <div class="members-count">-</div>
     <div class="members-list">-</div>
     <div class="messages"></div>
     <form class="message-form" onsubmit="return false;">
-        <input class="message-form__input" placeholder="Type a message.." type="text" />
-        <input class="message-form__button" value="Send" type="submit" />
+        <input class="message-form__input" placeholder="Type a message..." type="text" />
+        <input class="message-form__button" value="Send message" type="submit" />
     </form>
-    
+
     <script src="./script.js"></script>
 </body>
 
