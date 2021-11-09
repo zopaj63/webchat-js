@@ -1,0 +1,19 @@
+{
+  "name": "webchat",
+  "version": "1.0.0",
+  "description": "Seminarski rad: Algebra Front-end development 2021, Zoran Pajnić.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zopaj63/webchat-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zopaj63/webchat-js/issues"
+  },
+  "homepage": "https://github.com/zopaj63/webchat-js#readme"
+}

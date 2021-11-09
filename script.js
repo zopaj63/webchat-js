@@ -1,3 +1,21 @@
+import getRandomColor from "./components/getRandomColor";
+
+// get member name
+function getName() {
+    let member_name = "Member";
+    const memberNameForm = document.querySelector(".js-member-name");
+    console.log(memberNameForm);
+    const memberNameInput = memberNameForm.querySelector(".js-member-name__input");
+    console.log(memberNameInput);
+    memberNameForm.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("memberNameInput.value");
+        member_name = memberNameInput.value;
+        console.log(member_name);
+    });
+    return member_name;
+}
+
 
 //connect to a channel
 const drone = new Scaledrone("VIgNNXjmYel6Vmhu", {
@@ -57,25 +75,6 @@ drone.on('error', error => {
     console.error(error);
 });
 
-function getName() {
-    const member_name = "Member";
-    const memberNameForm = document.querySelector(".js-member-name");
-    console.log(memberNameForm);
-    const memberNameInput = memberNameForm.querySelector(".js-member-name__input");
-    console.log(memberNameInput);
-    memberNameForm.addEventListener("click", (event) => {
-        event.preventDefault();
-        console.log("memberNameInput.value");
-        const member_name = memberNameInput.value;
-        console.log(member_name);
-    });
-    return member_name;
-}
-
-function getRandomColor() {
-    randomColor = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-    return randomColor;
-}
 
 //handling users (joining and leaving room)
 const DOM = {
