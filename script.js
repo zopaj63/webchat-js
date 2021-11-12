@@ -1,20 +1,5 @@
+import getName from "./components/getName";
 import getRandomColor from "./components/getRandomColor";
-
-// get member name
-function getName() {
-    let member_name = "Member";
-    const memberNameForm = document.querySelector(".js-member-name");
-    console.log(memberNameForm);
-    const memberNameInput = memberNameForm.querySelector(".js-member-name__input");
-    console.log(memberNameInput);
-    memberNameForm.addEventListener("click", (event) => {
-        event.preventDefault();
-        console.log("memberNameInput.value");
-        member_name = memberNameInput.value;
-        console.log(member_name);
-    });
-    return member_name;
-}
 
 
 //connect to a channel
